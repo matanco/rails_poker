@@ -11,3 +11,27 @@
  *= require_self
  *= require_tree .
  */
+
+body{
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	font-family: Serif;
+}
+
+.background-image{
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background-image:url('1591221.jpg');
+	background-position:fixed;
+}
+
+.header{
+	color:white;
+	font-size:40px;
+	margin-left:160px;
+}
