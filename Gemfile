@@ -10,7 +10,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+## JQuery for RoR
 gem 'jquery-rails'
+## Users administration
+gem 'devise'
 
 group :development do
   # Database status
