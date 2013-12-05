@@ -1,12 +1,6 @@
 class PlayController < ApplicationController
-  
-  def method_name
+  def index
     
   end
-  
-  def method_name
-    
-  end
-
 end
 

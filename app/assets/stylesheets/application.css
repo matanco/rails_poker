@@ -13,7 +13,7 @@
  *= require_tree .
  */
 
-body{
+body {
 	margin:0;
 	padding:0;
 	height:100%;
@@ -21,23 +21,35 @@ body{
 	font-family: Serif;
 }
 
-.background-image{
+.background-image {
 	position:fixed;
 	left:0;
 	top:0;
 	height:100%;
 	width:100%;
 	background-image:url('1591221.jpg');
-	background-position:fixed;
 }
-
-.header{
+.table_bg{
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background-image:url('table.jpg');
+}
+.header {
 	color:white;
 	font-size:40px;
 	margin-left:160px;
 }
 
-.sign_up_block{
+.logged {
+	color:white;
+	font-size:16px;
+	margin-left:160px;
+}
+
+.sign_up_block {
 	color:white;
 	margin-left:160px;
 }

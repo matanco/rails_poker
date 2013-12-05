@@ -1,10 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :check_logged
+  include ApplicationHelper
   
-  def check_logged
-    if params[:controller] != 'welcome'
+  #before_filter :check_logged  
+  
+  def check_logged    
+    if check_controller(params[:controller])        
       if !current_user
         redirect_to root_path
       end
