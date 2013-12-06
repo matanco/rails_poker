@@ -15,6 +15,8 @@ end
 gem 'jquery-rails'
 ## Users administration
 gem 'devise'
+## Request API
+gem 'httparty'
 
 group :development do
   # Database status

@@ -75,6 +75,9 @@ GEM
       guard (>= 1.8)
       rspec (~> 2.13)
     hike (1.2.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.1)
     io-console (0.3)
     journey (1.0.4)
@@ -94,6 +97,7 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.2)
     multi_json (1.8.2)
+    multi_xml (0.5.4)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
@@ -203,6 +207,7 @@ DEPENDENCIES
   coolline
   devise
   guard-rspec
+  httparty
   jquery-rails
   pg
   pry
