@@ -1,3 +1,25 @@
 <div class="table_bg">
-	<%= @game["player_cards"]["1"]  %>
+	<table class="play_table">
+		<tr>
+			<td style="text-align:center;">
+				<%= image_tag('cards/b1fv.png') %>
+				<%= image_tag('cards/b1fv.png') %>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<%= image_tag("cards/#{@game["showdown"][0]}.png") %>
+				<%= image_tag("cards/#{@game["showdown"][1]}.png") %>
+				<%= image_tag("cards/#{@game["showdown"][2]}.png") %>
+				<%= image_tag("cards/#{@game["showdown"][3]}.png") %>
+				<%= image_tag("cards/#{@game["showdown"][4]}.png") %>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">		
+				<%= image_tag("cards/#{@game["player_cards"]["1"][0]}.png") %>
+				<%= image_tag("cards/#{@game["player_cards"]["1"][1]}.png") %>
+			</td>
+		</tr>
+	</table>
 </div>

@@ -17,6 +17,8 @@ gem 'jquery-rails'
 gem 'devise'
 ## Request API
 gem 'httparty'
+## Resize images
+gem 'rmagick', '2.13.2'
 
 group :development do
   # Database status
