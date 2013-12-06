@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131204180214) do
+ActiveRecord::Schema.define(:version => 20131206141710) do
+
+  create_table "plays", :force => true do |t|
+    t.string   "table_ident"
+    t.string   "stage"
+    t.text     "complete_game"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
