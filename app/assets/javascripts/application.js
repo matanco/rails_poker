@@ -14,13 +14,3 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
-
-$(document).ready(function(){
-	$("#player_check").click(function(){
-    	$.ajax({
-        	url: "<%= admin_update_dp_order_path(:id => order_item.id) %>",
-            type: "GET",
-			data: {dp: $("#id_<%= order_item.id %> option:selected").val() },
-        })
-    });
-});

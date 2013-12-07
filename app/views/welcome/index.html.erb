@@ -1,12 +1,25 @@
-<div class="background-image">	
+<div class="background-image">
+	<div class="logged">		
+		<% if current_user %>
+			Hello <%= current_user.email %>
+			<span><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></span>
+		<% end %>
+	</div>	
 	<br /><br /><br /><br />
 	<span class="header">Welcome To</span><br />
 	<span class="header"><strong style="margin-left:100px">Poker Rails</strong></span>
 	<br /><br /><br />
 	<% if !current_user %>
-		<div class="sign_up_block">
-			<%= render 'devise/registrations/form' %>
-		</div>	
+		<table class="sign_up_block" cellpadding="10">
+			<tr>
+				<td style="border-right:1px white solid;">
+					<%= render 'devise/registrations/form' %>
+				</td>				
+				<td style="vertical-align:top;">
+					<%= render 'devise/sessions/new' %>
+				</td>
+			</tr>
+		</table>			
 	<% else %>
 		<div class="btn btn-primary" style="width:150px;height:20px;margin-left:200px;">
 			<%= link_to 'Play Now', play_index_path %>

@@ -2,10 +2,7 @@ RailsPoker::Application.routes.draw do
   devise_for :users
   resources :play do
     member do
-      get :round1
-      get :flop
-      get :turn
-      get :river
+      get :status      
       get :confirm
     end
   end
