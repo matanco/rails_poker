@@ -1,4 +1,5 @@
-module PlayHelper
+module PlayHelper  
+  ## Get the game from external API
   def get_game
     url = "https://poker.p.mashape.com/index.php?players=2%3Cplayers%3E"    
     HTTParty.post(

@@ -11,7 +11,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$("#player_bet").click(function(){
     	$.ajax({
-        	url: "<%= status_play_path(:id => @ident) %>",
+        	url: "<%= bet_play_path(:id => @ident) %>",
             type: "GET",
 			data: {game: $("#game_id").val(),bet_val: $("#player_bet_value").val() },
         })
@@ -27,9 +27,8 @@ $(document).ready(function(){
 				<%= image_tag('cards/b1fv.png', :class => 'hand_card') %>
 			</td>
 		</tr>
-		<tr>
-			<td style="text-align:center;height:150px;" id="showdown">				
-			</td>
+		<tr>						
+			<td style="text-align:center;height:150px;" id="showdown"></td>
 		</tr>
 		<tr>
 			<td style="text-align:center;">									
@@ -38,22 +37,18 @@ $(document).ready(function(){
 				<span style="color:white;font-weight:bold;" id="show_rank"></span>
 			</td>
 		</tr>
-	</table>
-	<table style="width:100%;">
-		<tr>
-			<td style="text-align:center;">
-							
-			</td>
-		</tr>		
 	</table>	
 </div>
 <div class="footer">
+	<span class="footer_pot" id="pot"></span>
+</div>
+<div class="footer">
 	<input value="check" type="submit" id="player_check" class="btn btn-success">
-	<input value="bet" id="player_bet_value" />
+	<input value="10" id="player_bet_value" />
 	<input value="bet" type="submit" id="player_bet" class="btn btn-warning">
 	<input value="call" type="submit" id="palyer_call" class="btn btn-info">
 	<input value="fold" type="submit" id="palyer_fold" class="btn btn-danger">
-	<span style="color:gold;">
+	<span style="color:gold;" id="user_balance">
 		 Your Current Balance
 		 <%= number_with_delimiter(current_user.user_balance.balance, :delimiter => ',') %>
 	</span>

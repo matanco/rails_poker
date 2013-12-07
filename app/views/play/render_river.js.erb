@@ -1,2 +1,4 @@
 $('#showdown').empty().append("<%= j render :partial => 'river', :game => @game %>")
 $('#show_rank').empty().append("<%= j render :partial => 'rank', :hand1 => @hand1 %>")
+$('#pot').empty().append("<%= j render :partial => 'pot', :status => @status %>")
+$('#user_balance').empty().append("<%= j render :partial => 'user_balance', :game => @game %>")

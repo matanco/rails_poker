@@ -34,6 +34,17 @@ class PlayController < ApplicationController
         end
       end       
     end    
+  end
+  
+  def bet
+    if params[:bet_val].present?
+      Play.increase_game_pot(params[:id],params[:bet_val])
+      UserBalance.dedact_balance(current_user.id,params[:bet_val])
+      redirect_to status_play_path(:id => params[:id])
+    else
+      flash[:error] = "Bet not accepted"
+    end      
   end    
+
 end
 
